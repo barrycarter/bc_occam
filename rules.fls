@@ -1,0 +1,53 @@
+# F(X,Y) is read "X's F is Y"
+
+Rule (Child)
+  Premise
+    parent(X,Y)
+  Conclusion
+    child(Y,X)
+
+Rule(Mother)
+  Premises
+    female(X)
+    parent(X,Y)
+  Conclusion
+    mother(X,Y)
+
+Rule(Father)
+  Premises
+    male(X)
+    parent(X,Y)
+  Conclusion
+    father(X,Y)
+
+# this is incorrect: as stated, could include case X=Z
+
+Rule (Sibling)
+  Premises
+    mother(X,Y)
+    mother(Z,Y)
+    father(X,W)
+    father(Z,W)
+  Conclusion
+    sibling(X,Y)
+
+Rule (Sister)
+  Premises
+    sibling(X,Y)
+    female(Y)
+  Conclusion
+    sister(X,Y)
+
+Rule (Brother)
+  Premises
+    sibling(X,Y)
+    male(Y)
+  Conclusion
+    brother(X,Y)
+
+Rule (Uncle)
+  Premises
+    parent(X,Y)
+    brother(Y,Z)
+  Conclusion
+    uncle(X,Z)

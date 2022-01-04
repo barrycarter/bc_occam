@@ -1,0 +1,8 @@
+
+
+    metastatement ::= ( "parent" | "child" | "mother" | "father" | "sibling" | "brother" | "sister" | "uncle" )<NO_WHITESPACE>"(" metavariable "," metavariable ")"
+
+                    | ( "male" | "female" )<NO_WHITESPACE>"(" metavariable ")"
+
+                  ;
+
