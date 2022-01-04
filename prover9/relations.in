@@ -1,0 +1,46 @@
+% F(X,Y) is read "X's F is Y"
+
+formulas(usable).
+
+child(x,y) <-> parent(y,x).
+
+mother(x,y) <-> female(y) & parent(x,y).
+
+father(x,y) <-> male(x) & parent(x,y).
+
+% this is incorrect: as stated, could include case x=z
+
+% this relation really is unidirectional
+
+mother(x,y) & mother(z,y) & father(x,w) & father(z,w) -> sibling(x,z).
+
+sibling(x,z) -> exists y exists w mother(x,y) & mother(z,y) & father(x,w) & father(z,w).
+
+sister(x,y) <-> sibling(x,y) & female(y).
+
+brother(x,y) <-> sibling(x,y) & male(y).
+
+parent(x,y) & brother(y,z) -> uncle(x,z).
+
+uncle(x,z) -> exists y parent(x,y) & brother(y,z).
+
+end_of_list.
+
+formulas(goals).
+
+% uncle(x,y) & sister(x,z) -> uncle(z,y).
+
+uncle(x,y) & (sister(x,z) | brother(x,z)) -> uncle(z,y).
+
+% uncle(x,y) -> male(y).
+
+% sibling(y,x) -> sibling(x,y).
+
+% mother(y,x) -> female(x).
+
+% child(x,y) & female(x) -> mother(y,x).
+
+% mother(x,y) -> female(y).
+
+end_of_list.
+
