@@ -1,0 +1,38 @@
+# we assume "parent", "male", and "female" are well-defined
+
+child: opposite of parent
+
+mother: female parent
+
+father: male parent
+
+# TODO: need to cover concept of half and step siblings
+
+sibling: your parents' other children
+
+sister: female sibling
+
+brother: male sibling
+
+uncle: parent's brother
+
+aunt: parent's sister
+
+niece: sibling's daughter
+
+nephew: sibling's son
+
+daughter: female child
+
+son: male child
+
+grandparent: parent's parent
+
+grandchild: child's child
+
+cousin: your grandparent's other grandchildren, excluding your siblings
+
+
+
+
+
