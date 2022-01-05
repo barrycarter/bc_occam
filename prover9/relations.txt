@@ -32,6 +32,21 @@ grandchild: child's child
 
 cousin: your grandparent's other grandchildren, excluding your siblings
 
+# this is only a subset of formulas(goals) that I want to prove
+
+My aunt and uncle's female grandchildren are my nieces.
+
+My uncle's sisters are my aunts.
+
+My uncle's brothers are also my uncles.
+
+I'm not my own uncle
+
+I'm not my own sister
+
+My brother's sister is also my sister
+
+My uncle is also my sister's uncle
 
 
 
